@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Calculadora</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Este es un documento HTML5">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+  <header id="cabeceralogo">
+    <div>
+      <h1>Calculadora VUE-JS</h1>
+    </div>
+  </header>
+  <main>
+    <div>
+      <section id="articulosprincipales">
+        <div id="app">
+          <div id="valores">
+            <label  id="val2" for="">Valor 1:</label>
+            <input v-model="v1" type="text" required pattern="/^[0-9]*(\.?)[0-9]+$/"><br>
+            <label id="val1" for="">Valor 2:</label>
+            <input v-model="v2" type="text" required pattern="/^[0-9]*(\.?)[0-9]+$/"><br>
+          </div>
+          <div>
+           
+          </div>
+          <div id="botones">
+            <button v-on:click="sumar()">+</button>
+            <button v-on:click="restar()">-</button>
+            <button v-on:click="multiplicar()">X</button><br>
+            <button v-on:click="dividir()">/</button>
+            <button v-on:click="potencia()">1^2</button>
+            <button v-on:click="factorial()">1!</button>
+          </div>
+          <div>
+            <label id="re1" for="">Resultado:</label>
+            <label id="re2" for="">{{mensaje}}</label><br>
+          </div>
+
+        </div>
+        <script>
+          var app = new Vue({
+            el: '#app',
+            data: {
+
+              mensaje: 0,
+              v1: 0,
+              v2: 0,
+
+            },
+            methods: {
+              sumar() {
+                this.mensaje = parseInt(this.v1) + parseInt(this.v2)
+              },
+              restar() {
+                this.mensaje = parseInt(this.v1) - parseInt(this.v2)
+              },
+              multiplicar() {
+                this.mensaje = parseInt(this.v1) * parseInt(this.v2)
+              },
+              dividir() {
+                this.mensaje = parseInt(this.v1) / parseInt(this.v2)
+              },
+              potencia() {
+                this.mensaje = Math.pow(this.v1, this.v2)
+              },
+              factorial() {
+                var total = 1;
+                for (i = 1; i <= parseInt(this.v1); i++) {
+                  total = total * i;
+                }
+                this.mensaje=total
+              }
+
+
+            }
+          })
+
+        </script>
+
+      </section>
+
+
+  </main>
+
+</body>
+
+</html>

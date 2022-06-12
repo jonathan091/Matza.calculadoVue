@@ -1,0 +1,68 @@
+#cabeceralogo {
+  width: 96%;
+  height: 100px;
+  padding: 0% 2%;
+  background-color: #69b790;
+  text-align: center;
+ }
+ 
+ #cabeceralogo > div {
+  width: 980px;
+  margin: 0px auto;
+  padding-top: 5px;
+ }
+ #cabeceralogo h1 {
+  font: bold 50px Arial, sans-serif;
+  color: #2e3f37;
+ } 
+
+ main {
+  width: 96%;
+  padding: 2%;
+  background-image: url("Imagenes/cal.jpg")
+ }
+ main > div {
+  width: 900px;
+  margin: 0px auto;
+  text-align: center;
+ } 
+ body{
+
+  background-image: url("Imagenes/cal.jpg")
+ }
+ #articulosprincipales {
+  float: left;
+  width: 620px;
+  padding-top: 30px;
+background-color: #60a1cf;
+border-radius: 70px;
+}
+div{
+  text-align: center;
+}
+#botones{
+  text-align: center;
+}
+button{
+  background-color: #b4db41;
+    border: none;
+    color: rgb(9, 25, 29);
+    padding: 16px 32px;
+    font-size: 16px;
+    min-width: 21%;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+#re1,#re2{
+  font: bold 50px Arial, sans-serif;
+  color: #4448b5;
+
+}
+#val1,#val2{
+  font: bold 20px Arial, sans-serif;
+  color: #322b8fba;
+
+}
+
